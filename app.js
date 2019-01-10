@@ -39,7 +39,7 @@ const User = mongoose.model('User', userSchema);
 app.use(cors());
 
 app.get('/', (req, res) => {
-  Movie.find({}).exec().then((err, movies) => res.send(movies));
+  res.send(Movie.find({}, null, { skip: 10 }).select('overview').exec());
 });
 
 app.post('/auth/register', (req, res) => {
