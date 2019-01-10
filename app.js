@@ -3,12 +3,11 @@ require('dotenv/config');
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const util = require('util');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://@192.168.99.100:27017/movie-time');
+mongoose.connect('mongodb://root:root@192.168.99.100:27017/movie-time?authSource=admin', { useNewUrlParser: true });
 
 const { Schema, connection } = mongoose;
 const movieSchema = new Schema({
@@ -33,7 +32,7 @@ const userSchema = new Schema({
 });
 
 const Movie = mongoose.model('Movie', movieSchema);
-const User = mongoose.model('User', movieSchema);
+const User = mongoose.model('User', userSchema);
 
 
 // Enable CORS for the client app
@@ -45,17 +44,22 @@ app.get('/', (req, res) => {
 
 app.post('/auth/register', (req, res) => {
   const { username, password } = req.body;
-  User.update({username, password });
+  User.update({ username, password });
+  res.status(201);
+  res.send('ok');
   // register a user and send 201 Created.
 });
 
 app.post('auth/login', (req, res) => {
   const { username, password } = req.body;
+  User.find({ username, password });
+  res.status(400);
+  res.send('connected');
   // check the credentials
   // generate a token token -> jwt.sign()
   // include the userId inside the token's payload
   // if the check fails, send 401 Unauthorized
-})
+});
 
 // Error handler
 app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
