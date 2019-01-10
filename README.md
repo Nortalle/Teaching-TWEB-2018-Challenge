@@ -12,6 +12,8 @@ Pour réussir ce challenge, vous allez devoir développer une application front-
 
 ## Option 1: Movies explorer
 
+**Introduction**
+
 Si vous optez pour cette option vous allez devoir développer une application web de suggestion de films. Dans un premier temps, l’utilisateur sélectionne dans une liste les films qu’il a déjà visionnés et appréciés. Après avoir fait son choix, l’application lui propose une liste de suggestions de films prochainement en salles, basée sur ses préférences.
 
 **Consigne**
@@ -38,11 +40,11 @@ https://api.themoviedb.org/3/movie/popular?page=1&api_key=<YOUR_API_KEY>
 
 Voici un example de réponse pour cette requête retournant la première page de résultats (20 films les plus populaires).
 
-```json
+```js
 {
   "page": 1,
-	"total_results": 19854,
-	"total_pages": 993,
+  "total_results": 19854,
+  "total_pages": 993,
   "results": [
     {
       "vote_count": 2070,
@@ -60,7 +62,7 @@ Voici un example de réponse pour cette requête retournant la première page de
       "overview": "Arthur Curry learns that...",
       "release_date": "2018-12-07"
     }
-    ...
+    // ...
   ]
 }
 ```
@@ -82,7 +84,7 @@ Voici un example de réponse pour cette requête retournant la première page de
 
 ### 2. Films prochainement à l'affiche (2pt)
 
-Dans un deuxième temps vous allez créer une deuxième vue affichant la liste des films prochainement en salles. Il doit être possible de naviguer entre les deux vues. Ces informations sont accesibles à l'endpoint suivant:
+Vous allez devoir créer une deuxième vue affichant la liste des films prochainement en salles. Il doit être possible de naviguer entre les deux vues. Ces informations sont accesibles à l'endpoint suivant:
 
 ```
 https://api.themoviedb.org/3/movie/upcoming?page=1?api_key=<YOUR_API_KEY>
@@ -136,6 +138,8 @@ Finalement, vous allez déployer votre application statique sur la plateforme de
 
 
 ## Option 2: Movie Time
+
+**Introduction**
 
 Si vous optez pour cette option, vous allez devoir développer une API permettant de récupérer des informations sur des films. Depuis cette API, les utilisateurs auront la possibilité de récupérer une liste de films populaire et de gérer leur *watchlist* (liste des films à voir plus tard).
 
