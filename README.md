@@ -223,6 +223,8 @@ Si l’opération s’est bien déroulée, le message `imported 10000 documents`
 
 - (1pt) – Les films ont étés importés dans un MongoDB local ou distant. Ajoutez un screenshot du résultat de l'opération dans votre README.md.
 
+![importationDB](./data/importationDB.JPG)
+
 
 ### 2. Liste des films (3pt)
 
