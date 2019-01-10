@@ -72,7 +72,7 @@ Si vous souhaitez Appollo GraphQL, il existe une version GraphQL de l'API ici : 
 Dans ce cas, vous devez mettre votre api key dans le header `Authorization` de vos requêtes, comme dans l'exemple qui suit :
 ```js
 const httpLink = createHttpLink({
-  uri: 'https://graphql-tmdb.herokuapp.com/graphql’,
+  uri: 'https://graphql-tmdb.herokuapp.com/graphql',
   headers: {
     authorization: `<YOUR_API_KEY>`,
   }
