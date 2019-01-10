@@ -3,33 +3,21 @@ require('dotenv/config');
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const MovieModel = require('./models/MovieModel.js');
+const UserModel = require('./models/UserModel.js');
 
 const app = express();
 const port = process.env.PORT || 3000;
+const portdb = process.env.PORTDB || 27017;
+const adresseDB = process.env.ADDRESSDB || '192.168.99.100';
+const usernameDB = process.env.USERNAMEDB || 'root';
+const passwordDB = process.env.PASSWORDDB || 'root';
 
-mongoose.connect('mongodb://root:root@192.168.99.100:27017/movie-time?authSource=admin', { useNewUrlParser: true });
+mongoose.connect(`mongodb://${usernameDB}:${passwordDB}@${adresseDB}:${portdb}/movie-time?authSource=admin`, { useNewUrlParser: true });
 
 const { Schema, connection } = mongoose;
-const movieSchema = new Schema({
-  overview: String,
-  voteAverage: Number,
-  releaseDate: Date,
-  video: Boolean,
-  title: String,
-  originalLanguage: String,
-  tmdbId: Number,
-  originalTitle: String,
-  genres: [String],
-  popularity: Number,
-  voteCount: Number,
-  backdropPath: String,
-  adult: Boolean,
-  posterPath: String,
-});
-const userSchema = new Schema({
-  username: String,
-  password: String,
-});
+const movieSchema = new Schema(MovieModel);
+const userSchema = new Schema(UserModel);
 
 const Movie = mongoose.model('Movie', movieSchema);
 const User = mongoose.model('User', userSchema);
@@ -39,7 +27,7 @@ const User = mongoose.model('User', userSchema);
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send(Movie.find({}, null, { skip: 10 }).select('overview').exec());
+  res.send(Movie.find({}).exec());
 });
 
 app.post('/auth/register', (req, res) => {
