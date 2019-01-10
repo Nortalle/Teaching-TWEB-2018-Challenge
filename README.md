@@ -66,7 +66,17 @@ Cette requête retourne la première page de résultats (à savoir, les 20 films
 }
 ```
 
+Si vous souhaitez Appollo GraphQL, il existe une version GraphQL de l'API ici : https://graphql-tmdb.herokuapp.com/.
 
+Dans ce cas, vous devez mettre votre api key dans le header `Authorization` de vos requêtes, comme dans l'exemple qui suit :
+```js
+const httpLink = createHttpLink({
+  uri: 'https://graphql-tmdb.herokuapp.com/graphql’,
+  headers: {
+    authorization: `<YOUR_API_KEY>`,
+  }
+})
+``` 
 
 **Répartion des points:**
 
@@ -110,7 +120,7 @@ Le but de cette étape est de permettre à l'utilisateur de sélectionner/désel
 
 ### 4. Recommandations (1pt)
 
-Ucu **vous devez utiliser la vue "films prochainement à l'affiche"** de l'étape 2 pour proposer des recommandations basées sur les préférences de l'utilisateur.
+Ici **vous devez utiliser la vue "films prochainement à l'affiche"** de l'étape 2 pour proposer des recommandations basées sur les préférences de l'utilisateur.
 Fondamentalement, vous devez affiner les résultats reçus à l'endpoint `/movie/upcoming` dans la deuxième étape en gardant uniquement ceux qui correspondent à certains critères définis. Le choix et la définition de ces critères de filtre vous incombe, mais doit être réalisée selon la liste des films sélectionnés par l'utilisateur.
 
 Répartion des points:
@@ -119,9 +129,10 @@ Répartion des points:
 - (0.5pt) – le filtre appliqué est basé sur une ou plusieurs propriétés des films sélectionnés par l’utilisateur.
 - *(BONUS 0.5pt): les recommandations sont ordonnées selon leur pertinence.*
 
+### 5. BONUS - Sécurisation de l'application avec un formulaire de login (1pt)
+Dans cette étape **facultative**, vous pouvez développer une page de login afin de sécuriser votre application.
 
-
-### 5. Qualité du code (1.25pt)
+### 6. Qualité du code (1.25pt)
 
 Les points de cette étape sont répartis de la manière suivante :
 
@@ -132,7 +143,7 @@ Les points de cette étape sont répartis de la manière suivante :
 - (0.25pt) – les variables d’environnement sont utilisées lorsque cela est nécessaire.
 - *(BONUS 0.5pt) – les fonctions complexes sont également testées avec Mocha et Chai ou autres. Par exemple vous pouvez créer un test qui valide que la logique utilisée pour créer/trier les recommandations fonctionne correctement.*
 
-### 6. Déploiement (1pt)
+### 7. Déploiement (1pt)
 
 Finalement, vous devez déployer votre application statique sur la plateforme de votre choix. Pour gagner du temps, considérez l’utilisation de l’outil <https://zeit.co/now>.
 
@@ -297,5 +308,3 @@ Les points pour cette étape sont répartis de la manière suivante :
 ### 6. Déploiement (0.5pt)
 
 Finalement vous devez déployer votre API et votre base de données sur la plateforme de votre choix.
-
-_PS : n'oubliez pas de couper votre film avant d'ouvrir votre ordinateur en classe, s'il-vous-plaît._
