@@ -1,0 +1,92 @@
+swagger: "2.0"
+info:
+  description: "This is the specification for the Teaching-TWEB-2018-Challenge"
+  version: "1.0.0"
+  title: "Teaching-TWEB-2018-Challenge"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "vincent.guidoux1@heig-vd.ch"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost"
+basePath: "/"
+tags:
+- name: "movies"
+  description: "Everything about the movies"
+schemes:
+- "http"
+paths:
+  /movies:
+    get:
+      tags:
+        - "movies"
+      summary: "Get the list of all the movies"
+      description: "Get the list of all the movies"
+      operationId: "getMovies"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/movies"
+        400:
+          description: "something very very bad happened"
+definitions:
+  movies:
+    type: object
+    required:
+      - voteCount  
+      - video
+      - voteAverage
+      - title
+      - popularity
+      - posterPath
+      - originalLanguage
+      - originalTitle
+      - backdropPath
+      - adult
+      - overview
+      - releaseDate
+      - tmdbId
+      - genres
+    properties:
+      voteCount:
+        type: integer
+      video:
+        type: boolean
+      voteAverage:
+        type: number
+      title:
+        type: string
+      popularity:
+        type: number
+      posterPath:
+        type: string
+      originalLanguage:
+        type: string
+      originalTitle:
+        type: string
+      backdropPath:
+        type: string
+      adult:
+        type: boolean
+      overview:
+        type: string
+      releaseDate:
+        type: string
+      tmdbId:
+        type: integer
+      genres:
+        type: array
+        items:
+          type: string
+        
+        
+        
+        
+        
+        
