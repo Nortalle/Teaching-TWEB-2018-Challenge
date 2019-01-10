@@ -7,6 +7,7 @@ Le rendu se fera via [ce formulaire Google Forms](https://goo.gl/nwZUVk) dans le
 ## Option 1 : Movies Explorer (frontend)
 
 **Prélude**
+
 _Même si Benoît aime énormément écrire des tests en JavaScript, c'est aussi et avant tout un grand cinéphile ! Lorsqu'il rentre chez lui le soir après une dure journée de labeur, il se délecte d'un moment privilégié devant un film méticuleusement sélectionné au préalable. Chaque jour est une nouvelle chance d'explorer de nouveaux horizons cinématographiques et de se retrouver projeté dans des mondes inouïs tantôt féériques, tantôt dystopiques, tantôt romantiques. Malheureusement, notre héros met parfois beaucoup de temps pour sélectionner **le** film à visionner, car cela n'est pas chose aisée ! Pouvez-vous l'aider en développant une petite application frontend d'assistance ?_
 
 **Introduction**
@@ -152,6 +153,7 @@ Finalement, vous devez déployer votre application statique sur la plateforme de
 ## Option 2 : Movie Time (backend)
 
 **Prélude**
+
 _Tout comme le hibou, Djevijd est un homme qui préfère travailler la nuit. Tout le monde en est bien conscient. Il n'est cependant pas à blâmer : en effet, quoi de mieux que de repousser les ennuyeux problèmes à plus tard en exerçant la **fameuse** technique de l'autruche ? Osons le dire, c'est un procédé qui a su séduire et faire ses preuves parmi nombre d'entre nous.
 Ceci dit, d'autres se questionnent quant aux occupations de notre protagoniste durant la journée. Que peut-il bien faire de son temps libre, mis à part la création de memes larbinesques ? Eh bien... Il regarde des films, pardi ! Même s'il est ouvert à tous les genres, ses préférences s'orientent tout de même sur les films comiques qu'il raffole. D'autres vous dirons mêmes qu'ils ont parfois pu entendre des rires féminins s'échapper de son ordinateur !
 En bon procrastinateur, notre personnage vous demande aimablement de lui coder une petite API permettant de gérer des films, ainsi qu'une watchlist._
