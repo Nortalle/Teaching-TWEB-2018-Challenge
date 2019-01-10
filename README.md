@@ -67,7 +67,7 @@ Cette requête retourne la première page de résultats (à savoir, les 20 films
 }
 ```
 
-Si vous souhaitez Appollo GraphQL, il existe une version GraphQL de l'API ici : https://graphql-tmdb.herokuapp.com/.
+Si vous souhaitez Apollo GraphQL, il existe une version GraphQL de l'API ici : https://graphql-tmdb.herokuapp.com/.
 
 Dans ce cas, vous devez mettre votre api key dans le header `Authorization` de vos requêtes, comme dans l'exemple qui suit :
 ```js
@@ -77,7 +77,7 @@ const httpLink = createHttpLink({
     authorization: `<YOUR_API_KEY>`,
   }
 })
-``` 
+```
 
 **Répartion des points:**
 
@@ -296,7 +296,15 @@ Vous allez ici devoir ajouter et implémenter la fonctionnalité *watchlist* (li
 - (1pt) – il est possible d'ajouter un film dans la *watchlist* d’un utilisateur. 
 - *(BONUS 0.5pt) : vous avez sécurisé les endpoints afin de les rendres accessibles uniquement aux utilisateurs connectés. Utiliser l’id de l’utilisateur connecté lors de l’ajout d’un film dans une watchlist.*
 
-### 5. Qualité du code (1.25pt)
+
+
+### 5. (Bonus) Formulaire de login (0.5pt)
+
+Vous implémentez une application statique avec un formulaire de login.
+
+
+
+### 6. Qualité du code (1.25pt)
 
 Les points pour cette étape sont répartis de la manière suivante :
 
@@ -307,6 +315,6 @@ Les points pour cette étape sont répartis de la manière suivante :
 -  (0.25pt) – les variables d’environnement sont utilisées lorsque cela est nécessaire.
 - *(BONUS 0.5pt): vous avez créé au moins un test unitaire afin de valider la fonctionnalité de votre choix.*
 
-### 6. Déploiement (0.5pt)
+### 7. Déploiement (0.5pt)
 
 Finalement vous devez déployer votre API et votre base de données sur la plateforme de votre choix.
