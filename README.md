@@ -26,7 +26,7 @@ Si vous optez pour cette option vous allez devoir développer une application we
 
 - Vous mettrez l'accent sur la partie fonctionnelle plutôt que sur le design ou l'expérience utilisateur. 
 
-- Effectuer les différents étapes listées ci-dessous.
+- Implémenter les fonctionnalités demandées dans les étapes listées ci-dessous.
 
 
 
@@ -148,7 +148,7 @@ Si vous optez pour cette option, vous allez devoir développer une API permettan
 - Mettre en place un environnement de développement backend (repo, linter) avec Node.js
 - Implémenter une API REST ou GraphQL.
 - Persister les données dans une base de donnée MongoDB avec un ORM tels que mongoose ou équivalent.
-- Effectuer les différents étapes listées ci-dessous.
+- Implémenter les fonctionnalités et endpoints demandées dans les étapes listées ci-dessous.
 
 
 
